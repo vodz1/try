@@ -31,6 +31,7 @@ Route::get('posts/{id}', [PostController::class, 'show'])->name('posts.show');
 
 //Edit Route
 Route::get('posts/{id}/edit', [PostController::class, 'edit'])->name('posts.edit');
+Route::put('posts/{id}/edit', [PostController::class, 'update'])->name('posts.update');
 
 Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
 
@@ -44,4 +45,3 @@ Route::delete('posts/{id}', [PostController::class, 'destroy'])->name('posts.des
 Route::fallback(function () {
     return 'Page Not Found';
 });
-?>
