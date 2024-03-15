@@ -30,7 +30,7 @@ class PostController extends Controller
         //     'body' => 'required',
         //     'user_id' => 'required'
         // ]);
-        Post::create(['title' => $request->title, 'body' => $request->body, 'enabled' => 1, 'published_at' => Carbon::now(), 'user_id' => 2]);
+        Post::create(['title' => $request->title, 'body' => $request->body, 'published_at' => Carbon::now(), 'user_id' => 2]);
 
         return redirect()->route('posts.index');
     }

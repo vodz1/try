@@ -19,7 +19,6 @@ class PostFactory extends Factory
         return [
             'title' => $this->faker->sentence,
             'body' => $this->faker->paragraph,
-            'enabled' => $this->faker->boolean,
             'published_at' => $this->faker->dateTime(),
             'user_id' => $this->faker->numberBetween(0, 10)
         ];
